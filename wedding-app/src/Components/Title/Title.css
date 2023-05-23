@@ -1,0 +1,35 @@
+.bgblur{
+  background-image: url("img/bgimg2.jpg");
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+  z-index: 1;
+  padding-top: 35%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgblurtext{
+  background-color: rgba(182, 130, 230, 0.726);
+  font-weight: bold;
+  border: 3px solid dodgerblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 50%;
+  text-shadow: -1px 0 dodgerblue, 0 1px dodgerblue, 1px 0 dodgerblue, 0 -1px dodgerblue, -2px 0 rgb(255, 255, 255), 0 2px rgb(255, 255, 255), 2px 0 rgb(255, 253, 253), 0 -2px rgb(255, 255, 255);
+  outline: 3px solid rgb(255, 255, 255);
+  outline-offset: -10px;
+  /*animation: App-logo-spin infinite 10s ease-in-out;*/
+}
+body, html {
+  height: 100%;
+}

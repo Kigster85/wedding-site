@@ -1,0 +1,170 @@
+/* Shrinking Nav Bar Css */
+.Navbar {
+  background-color: rgb(182, 130, 230);
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 99;
+  border-bottom: solid 4px white;
+}
+.Navbar button{
+  all: unset;
+  color: rgb(2, 129, 233);;
+  text-shadow: 0.05rem 0.05rem black;
+  font-weight: bold;
+  transition-duration: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  height: 100%;
+  padding: 5px;
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  border-left: solid 2px rgba(255, 255, 255, 0);
+  border-right: solid 2px rgba(255, 255, 255, 0);
+  
+
+}
+.Navbar button:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(2, 101, 182);
+  transition-duration: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  padding: 5px;
+  background-color: dodgerblue;
+  color: rgb(114, 27, 196);
+  border-left: solid 2px white;
+  border-right: solid 2px white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+  /* Style the active/current link */
+.Navbar button.active {
+  background-color: dodgerblue;
+  color: white;
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
+  border-left: solid 2px rgb(255, 255, 255);
+  border-right: solid 2px rgb(255, 255, 255);
+}
+.Navbar button.active:hover {
+  background-color: dodgerblue;
+  color: rgb(114, 27, 196);
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
+
+}
+
+
+
+/* Style the active/current link */
+
+/* Display some links to the right */
+#navbar-right {
+  float: right;
+  border-left: solid 2px rgba(255, 255, 255, 0);
+  border-right: solid 2px rgba(255, 255, 255, 0);
+}
+
+
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+  color: white;
+  padding: 12px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  border-left: solid 2px rgba(255, 255, 255, 0);
+  border-right: solid 2px rgba(255, 255, 255, 0);
+}
+
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(182, 130, 230);
+  z-index: 12;
+  margin-top: 45px;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content button {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content button:hover {
+  background-color: dodgerblue;
+  color: rgb(114, 27, 196);
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: rgb(182, 130, 230);
+  z-index: 12;
+
+}
+
+/* Links inside the dropdown */
+.dropdown-content2 button {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content2 button:hover {
+  background-color: dodgerblue;
+  color: rgb(114, 27, 196);
+  text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown .dropdown-content:hover .dropdown-content2 {
+  display: block;
+}
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  .Navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  .Navbar button {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
