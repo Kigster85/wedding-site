@@ -43,3 +43,18 @@ body, html {
     transform: rotateY(360deg);
   }
 }
+
+  /* Style the active/current link */
+  .active button {
+    background-color: dodgerblue;
+    color: white;
+    text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
+    border-left: solid 2px rgb(255, 255, 255);
+    border-right: solid 2px rgb(255, 255, 255);
+  }
+  .active button:hover {
+    background-color: dodgerblue;
+    color: rgb(114, 27, 196);
+    text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
+  
+  }

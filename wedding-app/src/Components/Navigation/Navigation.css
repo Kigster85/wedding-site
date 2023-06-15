@@ -9,7 +9,6 @@
   border-bottom: solid 4px white;
 }
 .Navbar button{
-  all: unset;
   color: rgb(2, 129, 233);;
   text-shadow: 0.05rem 0.05rem black;
   font-weight: bold;
@@ -25,7 +24,8 @@
   font-size: 18px;
   border-left: solid 2px rgba(255, 255, 255, 0);
   border-right: solid 2px rgba(255, 255, 255, 0);
-  
+  background-color: rgb(182, 130, 230);
+
 
 }
 .Navbar button:hover{
@@ -47,14 +47,14 @@
 
 }
   /* Style the active/current link */
-.Navbar button.active {
+.active button {
   background-color: dodgerblue;
   color: white;
   text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
   border-left: solid 2px rgb(255, 255, 255);
   border-right: solid 2px rgb(255, 255, 255);
 }
-.Navbar button.active:hover {
+.active button:hover {
   background-color: dodgerblue;
   color: rgb(114, 27, 196);
   text-shadow: -1px 0 rgb(0, 0, 0), 0 1px rgb(0, 0, 0),rgb(0, 0, 0)0 white, 0 -1px rgb(0, 0, 0);
@@ -151,7 +151,11 @@
 }
 
 /* Show the dropdown menu on hover */
-.dropdown .dropdown-content:hover .dropdown-content2 {
+.dropdown .dropdown-content:hover {
+  display: block;
+}
+/* Show the dropdown menu on hover */
+.dropdown-content:hover .dropdown-content2 {
   display: block;
 }
 /* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */

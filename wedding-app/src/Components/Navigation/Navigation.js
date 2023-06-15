@@ -1,51 +1,64 @@
-import React    from "react";
-import { Link } from 'react-router-dom';
 import "./Navigation.css";
+import ActiveButton from '../Button/Button'
+import React, { useState } from 'react';
 
+
+  
 const Navigation = () => {
+  const [showSubmenu, setShowSubmenu] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowSubmenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowSubmenu(false);
+  };
+
   return (
     <nav>
     <div class="Navbar">
 
-    <Link to="/"><button class="active" >Home</button></Link>
+    <ActiveButton exact to="/" label="Home"></ActiveButton>
     <div class="dropdown">
-      <Link to="About"><button href="#about" class="dropbtn">About <i class="fa fa-caret-down"></i></button></Link>
+      <ActiveButton to="About" label="About" class="fa-solid fa-caret-down"></ActiveButton>
         <div class="dropdown-content">
-        <Link to="Our Story"><button>Our Story</button></Link>
-        <Link to="Wedding Party"><button>Wedding Party</button></Link>
+        <ActiveButton to="Our Story" label="Our Story"></ActiveButton>
+        <ActiveButton to="WeddingParty" label="Wedding Party"></ActiveButton>
         </div>
     </div>
     <div class="dropdown">
-    <Link to="Venue"><button href="#about" class="dropbtn">The Venue<i class="fa fa-caret-down"></i></button></Link>
-        <div class="dropdown-content">
-        <Link to="Where to Stay"><button>Where to Stay</button></Link>
-        <Link to="Airport Information"><button>Airport Information</button></Link>
-        <Link to="How To Get Around"><button>How To Get Around</button></Link>
-        <Link to="What tyo Do In Town"><button>What to Do In Town</button></Link>
+    <ActiveButton to="Venue" label="Venue"><i class="fa-solid fa-caret-down"></i></ActiveButton>
+        <div class="dropdown-content" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+        <ActiveButton to="WhereToStay" label="Where To Stay" ><i class="fa-solid fa-caret-down"></i></ActiveButton>
+        {showSubmenu && (
+      <div class="dropdown-content2" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
 
-          <div class="dropdown-content2">
-          <Link to="Maps"><button>Maps</button></Link>
-          <Link to="Booking Accommodation"><button>Booking Accommodation</button></Link>
-        </div>
-        </div>
+          <ActiveButton to="Map" label="Map"></ActiveButton>
+          <ActiveButton to="BookingAccommodation" label="Booking Accommodation"></ActiveButton>
 
+        </div>          )}
+        <ActiveButton to="AirportInfo" label="Airport Information"></ActiveButton>
+        <ActiveButton to="HowToGetAround" label="How To Get Around"></ActiveButton>
+        <ActiveButton to="WhatToDoInTown" label="What To Do In Town"></ActiveButton>          
+        </div>
     </div>
     <div class="dropdown">
-    <Link to="Schedule"><button class="dropbtn">Schedule<i class="fa fa-caret-down"></i></button></Link>
+    <ActiveButton to="Schedule" label="Schedule"><i class="fa-solid fa-caret-down"></i></ActiveButton>
       <div class="dropdown-content">
-      <Link to="Pre-Wedding Activities"><button>Pre-Wedding Activities</button></Link>
-      <Link to="Day Of Wedding"><button>Day Of Wedding</button></Link>
-      <Link to="Post Wedding Events"><button>Post-Wedding Events</button></Link>
-      <Link to="FAQ's"><button>FAQs</button></Link>
+      <ActiveButton to="Pre Wedding Activities" label="Pre Wedding Activities"></ActiveButton>
+      <ActiveButton to="Day Of Wedding" label="Day Of Wedding"></ActiveButton>
+      <ActiveButton to="Post Wedding Events" label="Post Wedding Evetns"></ActiveButton>
+      <ActiveButton to="FAQs" label="FAQs"></ActiveButton>
       </div>
     </div>
-    <Link to="Registry Links"><button>Registry Links</button></Link>
-    <Link to="Socials"><button>Socials</button></Link>
-    <Link to="Photos"><button>Photos</button></Link>
-    <Link to="Contact"><button href="#contact">Contact</button></Link>
+    <ActiveButton to="Registry" label="Registry"></ActiveButton>
+    <ActiveButton to="Socials" label="Socials"></ActiveButton>
+    <ActiveButton to="Photos" label="Photos"></ActiveButton>
+    <ActiveButton to="Contact" label="Contact"></ActiveButton>
 
     <div id="navbar-right">
-    <Link to="Log In"><button>Log On</button></Link>
+    <ActiveButton to="Login" label="Login"></ActiveButton>
     </div>
   </div>
   </nav>)
