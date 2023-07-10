@@ -18,8 +18,7 @@ const Navigation = () => {
   return (
     <nav>
     <div class="Navbar">
-
-    <ActiveButton exact to="/" label="Home"></ActiveButton>
+      <ActiveButton exact to="/" label="Home"></ActiveButton>
     <div class="dropdown">
       <ActiveButton to="About" label="About" class="fa-solid fa-caret-down"></ActiveButton>
         <div class="dropdown-content">
@@ -32,39 +31,33 @@ const Navigation = () => {
         <div class="dropdown-content" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
         <ActiveButton to="WhereToStay" label="Where To Stay" ><i class="fa-solid fa-caret-down"></i></ActiveButton>
         {showSubmenu && (
-      <div class="dropdown-content2" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-
-          <ActiveButton to="Map" label="Map"></ActiveButton>
-          <ActiveButton to="BookingAccommodation" label="Booking Accommodation"></ActiveButton>
-
-        </div>          )}
+          <div class="dropdown-content2" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <ActiveButton to="Map" label="Map"></ActiveButton>
+            <ActiveButton to="BookingAccommodation" label="Booking Accommodation"></ActiveButton>
+          </div>)}
         <ActiveButton to="AirportInfo" label="Airport Information"></ActiveButton>
         <ActiveButton to="HowToGetAround" label="How To Get Around"></ActiveButton>
         <ActiveButton to="WhatToDoInTown" label="What To Do In Town"></ActiveButton>          
-        </div>
+      </div>
     </div>
     <div class="dropdown">
     <ActiveButton to="Schedule" label="Schedule"><i class="fa-solid fa-caret-down"></i></ActiveButton>
       <div class="dropdown-content">
-      <ActiveButton to="Pre Wedding Activities" label="Pre Wedding Activities"></ActiveButton>
-      <ActiveButton to="Day Of Wedding" label="Day Of Wedding"></ActiveButton>
-      <ActiveButton to="Post Wedding Events" label="Post Wedding Evetns"></ActiveButton>
-      <ActiveButton to="FAQs" label="FAQs"></ActiveButton>
+        <ActiveButton to="Pre Wedding Activities" label="Pre Wedding Activities"></ActiveButton>
+        <ActiveButton to="Day Of Wedding" label="Day Of Wedding"></ActiveButton>
+        <ActiveButton to="Post Wedding Events" label="Post Wedding Evetns"></ActiveButton>
+        <ActiveButton to="FAQs" label="FAQs"></ActiveButton>
       </div>
     </div>
-    <ActiveButton to="Registry" label="Registry"></ActiveButton>
-    <ActiveButton to="Socials" label="Socials"></ActiveButton>
-    <ActiveButton to="Photos" label="Photos"></ActiveButton>
-    <ActiveButton to="Contact" label="Contact"></ActiveButton>
-
+      <ActiveButton to="Registry" label="Registry"></ActiveButton>
+      <ActiveButton to="Socials" label="Socials"></ActiveButton>
+      <ActiveButton to="Photos" label="Photos"></ActiveButton>
+      <ActiveButton to="Contact" label="Contact"></ActiveButton>
     <div id="navbar-right">
-    <ActiveButton to="Login" label="Login"></ActiveButton>
+      <ActiveButton to="Login" label="Login"></ActiveButton>
     </div>
   </div>
   </nav>)
   };
-
-
-
 
 export default Navigation;

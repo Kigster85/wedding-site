@@ -52,9 +52,7 @@ function App() {
         <Route path="/pre wedding activities" element={<PreWeddingActivities/>} />  
         <Route path="/faqs" element={<FAQs/>} />  
         <Route path="/socials" element={<Socials/>} />  
-        <Route path="/registry" element={<Registry/>} />  
-
-
+        <Route path="/registry" element={<Registry/>} />
         </Routes>
       </div>
     </Router>
